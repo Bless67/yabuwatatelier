@@ -4,10 +4,11 @@ import { getProductById } from "@/lib/actions/products";
 export async function generateMetadata({
   params,
 }: {
-  params: { productId: string };
+  params: Promise<{ productId: string }>;
 }): Promise<Metadata> {
   try {
-    const product = await getProductById(parseInt(params.productId, 10));
+    const { productId } = await params;
+    const product = await getProductById(parseInt(productId, 10));
     const imageUrl = product.images?.[0]?.url;
 
     return {

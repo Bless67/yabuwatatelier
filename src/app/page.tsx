@@ -5,6 +5,7 @@ import { FaTruck, FaLock, FaHeadset, FaStar, FaGem } from "react-icons/fa";
 import { getFeaturedProducts} from "@/lib/actions/products";
 import { Card } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { HeroFeaturedImages } from "@/components/HeroFeaturedImages";
 
 export const metadata: Metadata = {
   title: "Yabuwat Atelier | Modern Nigerian Fashion",
@@ -72,9 +73,9 @@ export default async function HomePage() {
               </div>
             </div>
 
-            <div className="relative h-48 sm:h-80 md:h-full hidden md:block">
-              <div className="absolute inset-0 bg-linear-to-br from-[#b8a876]/20 to-transparent rounded-2xl" />
-              <div className="text-5xl sm:text-6xl text-center pt-12">🛍️</div>
+            <div className="relative h-64 sm:h-80 md:h-full">
+              <div className="absolute inset-0 bg-linear-to-br from-[#b8a876]/20 to-transparent rounded-3xl" />
+              <HeroFeaturedImages products={featuredProducts} />
             </div>
           </div>
         </div>

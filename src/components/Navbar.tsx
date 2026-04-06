@@ -33,7 +33,7 @@ export default function Navbar() {
           {/* Logo/Brand */}
           <div className="flex items-center rounded-lg p-2  ">
             <Link href="/">
-              <Image src={"/logo.svg"} alt="logo" width={50} height={20} className="bg-[#d1d8b4]"/>
+              <Image src={"/logo.svg"} alt="logo" width={50} height={15} className="bg-[#d1d8b4]"/>
             </Link>
           </div>
 
@@ -44,12 +44,12 @@ export default function Navbar() {
               className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 group ${
                 pathname === "/"
                   ? "bg-[#b8a876] text-[#1a4d3e]"
-                  : "hover:bg-[#2d5a52] hover:text-[#b8a876]"
+                  : "text-white hover:bg-[#2d5a52] hover:text-[#b8a876]"
               }`}
             >
               <FiHome
                 size={20}
-                className="group-hover:scale-110 transition-transform"
+                className="text-current group-hover:scale-110 transition-transform"
               />
               <span className="font-medium">Home</span>
             </Link>
@@ -58,12 +58,12 @@ export default function Navbar() {
               className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 group ${
                 pathname === "/catalog"
                   ? "bg-[#b8a876] text-[#1a4d3e]"
-                  : "hover:bg-[#2d5a52] hover:text-[#b8a876]"
+                  : "text-white hover:bg-[#2d5a52] hover:text-[#b8a876]"
               }`}
             >
               <FiShoppingBag
                 size={20}
-                className="group-hover:scale-110 transition-transform"
+                className="text-current group-hover:scale-110 transition-transform"
               />
               <span className="font-medium">Catalog</span>
             </Link>
@@ -72,12 +72,12 @@ export default function Navbar() {
               className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 group ${
                 pathname === "/contact"
                   ? "bg-[#b8a876] text-[#1a4d3e]"
-                  : "hover:bg-[#2d5a52] hover:text-[#b8a876]"
+                  : "text-white hover:bg-[#2d5a52] hover:text-[#b8a876]"
               }`}
             >
               <FiUsers
                 size={20}
-                className="group-hover:scale-110 transition-transform"
+                className="text-current group-hover:scale-110 transition-transform"
               />
               <span className="font-medium">Contact</span>
             </Link>
@@ -86,11 +86,11 @@ export default function Navbar() {
               className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 group relative ${
                 pathname === "/cart"
                   ? "bg-[#b8a876] text-[#1a4d3e]"
-                  : "hover:bg-[#2d5a52] hover:text-[#b8a876]"
+                  : "text-white hover:bg-[#2d5a52] hover:text-[#b8a876]"
               }`}
             >
               <div className="relative">
-                <FaCartShopping size={20} className="text-[#b8a876]" />
+                <FaCartShopping size={20} className="text-current" />
                 {cartQuantity > 0 && (
                   <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                     {cartQuantity}
@@ -109,7 +109,7 @@ export default function Navbar() {
               href="/cart"
               className="relative p-2 rounded-lg hover:bg-[#2d5a52] transition-all duration-300"
             >
-              <FaCartShopping size={20} className="text-[#b8a876]" />
+              <FaCartShopping size={20} className="text-white" />
               {cartQuantity > 0 && (
                 <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                   {cartQuantity}
@@ -122,7 +122,7 @@ export default function Navbar() {
               className="inline-flex items-center justify-center p-3 rounded-lg hover:bg-[#2d5a52] focus:outline-none transition-all duration-300 hover:scale-110"
               aria-expanded={isOpen}
             >
-              {isOpen ? <FiX size={28} className="text-[#b8a876]" /> : <FiMenu size={28} className="text-[#b8a876]" />}
+              {isOpen ? <FiX size={28} className="text-white" /> : <FiMenu size={28} className="text-white" />}
             </button>
           </div>
         </div>
