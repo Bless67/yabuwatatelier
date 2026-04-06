@@ -1,6 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { getProductById } from "@/lib/actions/products";
 import { Card, CardContent } from "@/components/ui/card";
@@ -24,39 +23,6 @@ import { useEffect, useState, use } from "react";
 import AddToCartButton from "@/components/AddToCartButton";
 import ProductDetailsSkeleton from "@/components/ProductDetailsSkeleton";
 import type { Product, ProductImage } from "@/generated/client";
-
-export async function generateMetadata({
-  params,
-}: {
-  params: { productId: string };
-}): Promise<Metadata> {
-  try {
-    const product = await getProductById(parseInt(params.productId, 10));
-    const imageUrl = product.images?.[0]?.url;
-
-    return {
-      title: `${product.name} | Yabuwat Atelier`,
-      description:
-        product.description ||
-        "Discover premium Nigerian fashion from Yabuwat Atelier.",
-      openGraph: {
-        title: `${product.name} | Yabuwat Atelier`,
-        description:
-          product.description ||
-          "Discover premium Nigerian fashion from Yabuwat Atelier.",
-        type: "website",
-        images: imageUrl
-          ? [{ url: imageUrl, alt: product.images[0]?.alt || product.name }]
-          : [],
-      },
-    };
-  } catch {
-    return {
-      title: "Product | Yabuwat Atelier",
-      description: "Discover premium Nigerian fashion from Yabuwat Atelier.",
-    };
-  }
-}
 
 type ProductWithImages = Product & {
   images: ProductImage[];

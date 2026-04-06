@@ -1,6 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
 import { getCart } from "@/lib/actions/cart";
 import { useCart } from "@/context/CartProvider";
 import { useEffect, useState } from "react";
@@ -19,18 +18,6 @@ import {
 import { FiMinus, FiPlus, FiTrash2 } from "react-icons/fi";
 import CheckoutDialog from "@/components/CheckoutDialog";
 import CartSkeleton from "@/components/CartSkeleton";
-
-export const metadata: Metadata = {
-  title: "Your Cart | Yabuwat Atelier",
-  description:
-    "Review your selected Yabuwat Atelier items, adjust quantities, and proceed with ease.",
-  openGraph: {
-    title: "Your Cart | Yabuwat Atelier",
-    description:
-      "Review your selected Yabuwat Atelier items, adjust quantities, and proceed with ease.",
-    type: "website",
-  },
-};
 
 interface ProductImage {
   id: string;

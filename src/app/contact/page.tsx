@@ -1,6 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
@@ -12,18 +11,6 @@ import {
   
   FaWhatsapp,
 } from "react-icons/fa";
-
-export const metadata: Metadata = {
-  title: "Contact Yabuwat Atelier | Support & Styling",
-  description:
-    "Reach Yabuwat Atelier for custom styling requests, order support, and wholesale inquiries.",
-  openGraph: {
-    title: "Contact Yabuwat Atelier | Support & Styling",
-    description:
-      "Reach Yabuwat Atelier for custom styling requests, order support, and wholesale inquiries.",
-    type: "website",
-  },
-};
 
 const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
 const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
