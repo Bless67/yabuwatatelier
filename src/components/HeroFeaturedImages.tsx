@@ -36,7 +36,7 @@ export function HeroFeaturedImages({ products }: HeroFeaturedImagesProps) {
   }
 
   return (
-    <div className="relative h-64 sm:h-80 md:h-full overflow-hidden rounded-3xl shadow-xl">
+    <div className="relative h-full w-full overflow-hidden rounded-lg shadow-2xl">
       {products.map((product, index) => {
         const image = product.images[0];
 
@@ -49,14 +49,12 @@ export function HeroFeaturedImages({ products }: HeroFeaturedImagesProps) {
             }`}
           >
             {image?.url ? (
-               <AspectRatio ratio={1} className=" overflow-hidden">
-
-
+               <AspectRatio ratio={1} className="overflow-hidden">
                  <Image
                    src={image.url}
                    alt={image.alt || product.name}
                    fill
-                   className="object-cover"
+                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                  />
                </AspectRatio>
               
@@ -66,23 +64,23 @@ export function HeroFeaturedImages({ products }: HeroFeaturedImagesProps) {
               </div>
             )}
 
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1a4d3e]/85 via-transparent to-transparent" />
-            <div className="absolute bottom-4 left-4 right-4 text-white">
-              <p className="text-xs uppercase tracking-[0.3em] text-[#b8a876] mb-1">Featured product</p>
-              <h3 className="text-xl sm:text-2xl font-semibold">{product.name}</h3>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1a4d3e]/90 via-[#1a4d3e]/20 to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6 text-white">
+              <p className="text-xs uppercase tracking-widest text-[#b8a876] mb-2 font-semibold">Featured</p>
+              <h3 className="text-2xl sm:text-3xl font-semibold leading-tight">{product.name}</h3>
             </div>
           </Link>
         );
       })}
 
-      <div className="absolute bottom-4 right-4 flex items-center gap-2">
+      <div className="absolute bottom-6 right-6 flex items-center gap-1.5">
         {products.map((_, index) => (
           <button
             key={index}
             type="button"
             onClick={() => setActiveIndex(index)}
-            className={`h-2.5 w-2.5 rounded-full transition-colors duration-300 ${
-              index === activeIndex ? "bg-white" : "bg-white/50"
+            className={`h-2 rounded-full transition-all duration-300 ${
+              index === activeIndex ? "bg-white w-8" : "bg-white/40 w-2 hover:bg-white/60"
             }`}
             aria-label={`Show slide ${index + 1}`}
           />
