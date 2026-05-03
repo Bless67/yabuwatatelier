@@ -7,6 +7,8 @@ import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import AddToCartButton from "@/components/AddToCartButton";
 
+export const dynamic="force-dynamic"
+
 export const metadata: Metadata = {
   title: "Catalog | Yabuwat Atelier Collection",
   description:

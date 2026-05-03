@@ -7,6 +7,8 @@ import { Card } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { HeroFeaturedImages } from "@/components/HeroFeaturedImages";
 
+export const dynamic="force-dynamic"
+
 export const metadata: Metadata = {
   title: "Yabuwat Atelier | Modern Nigerian Fashion",
   description:

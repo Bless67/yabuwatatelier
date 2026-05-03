@@ -51,6 +51,7 @@ interface Cart {
   createdAt: Date;
   updatedAt: Date;
 }
+export const dynamic="force-dynamic"
 
 export default function CartPage() {
   const { removeItem, updateQuantity, isLoading } = useCart();
