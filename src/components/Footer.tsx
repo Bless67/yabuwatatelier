@@ -79,7 +79,7 @@ export default function Footer() {
                 <FaWhatsapp size={24} />
               </a>
               <a
-                href="https://www.facebook.com/profile.php?id=61571468142528"
+                href="https://www.facebook.com/profile.php?id=61582339970791"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-[#b8a876] transition-colors"
@@ -95,7 +95,7 @@ export default function Footer() {
                 <FaInstagram size={24} />
               </a>
               <a
-                href="https://twitter.com/YabuwatAtelier"
+                href="https://x.com/JYabuwat14061"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-[#b8a876] transition-colors"
