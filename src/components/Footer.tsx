@@ -71,7 +71,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://wa.me/+2349161107183"
+                href="https://wa.me/+2349025136307"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-[#b8a876] transition-colors"
@@ -79,7 +79,7 @@ export default function Footer() {
                 <FaWhatsapp size={24} />
               </a>
               <a
-                href="https://facebook.com/YabuwatAtelier"
+                href="https://www.facebook.com/profile.php?id=61571468142528"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-[#b8a876] transition-colors"
